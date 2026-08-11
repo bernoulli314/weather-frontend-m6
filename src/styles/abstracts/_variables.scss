@@ -1,0 +1,15 @@
+@forward '../themes/light-theme';
+
+$bg-main: rgb(17, 12, 23);
+$bg-secondary: rgb(29, 11, 27);
+
+$text-color: white;
+$temp-color: rgb(135, 206, 250);
+
+$shadow-card:
+    0 10px 25px rgba(0,35,133,.4);
+
+$shadow-card-hover:
+    0 15px 30px rgba(0,110,255,.53);
+
+$radius: 15px;

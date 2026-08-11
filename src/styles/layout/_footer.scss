@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.footer{
+
+    &__texto {
+        font-size: .9rem;
+        color: v.$text-color;
+    }
+}

@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.weather-content{
+
+    &__titulo {
+        @include m.titulo-seccion;
+    }
+
+    &__texto {
+        color: v.$text-color;
+    }
+
+    &__input {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    &__grid {
+        margin-top: 2rem;
+    }
+}
