@@ -9,22 +9,10 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/catalog',
-    name: 'catalog',
-    component: DetalleLugarView
-  },
-  {
-    path: '/product/:id',
-    name: 'product',
+    path: '/lugar/:id',
+    name: 'detalle',
     component: DetalleLugarView,
     props: true
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: DetalleLugarView,
-    alias: '/acerca'
-
   },
   {
     path: '/inicio',

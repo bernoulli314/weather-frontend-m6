@@ -54,21 +54,12 @@ const planetasFiltrados = computed(() => {
 
     <main class="weather-content">
 
-        <!-- Título -->
-
-        <h1 class="weather-content__titulo">
-
-            🌌 El Tiempo en tu Planeta
-
-        </h1>
-
-
         <!-- Botones para cambiar de categoría -->
 
-        <div class="weather-content__filtros">
+        <div class="navbar-nav d-flex flex-row flex-wrap">
 
             <button
-                class="btn btn-outline-info"
+                class="mb-2 btn btn--ss"
                 @click="categoria = 'sistemaSolar'"
             >
                 Sistema Solar
@@ -76,27 +67,43 @@ const planetasFiltrados = computed(() => {
 
 
             <button
-                class="btn btn-outline-info"
+                class="mb-2 btn btn--exo"
                 @click="categoria = 'exoplanetas'"
             >
                 Exoplanetas
             </button>
+
+            <a class="nav-link btn"
+                href="https://science.nasa.gov/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Acerca de
+            </a>
 
         </div>
 
 
         <!-- Buscador -->
 
+        <h1 class="text-center mb-3 fw-bold weather-content__titulo">
+            PRONÓSTICO GALÁCTICO
+        </h1>
+
+        <p class="text-center weather-content__texto">
+            ¿Quieres conocer el tiempo de tu planeta favorito? ¡Búscalo aquí!
+        </p>
+
         <form
-            class="weather-content__busqueda"
+            class="input-group weather-content__input"
             @submit.prevent
         >
 
+            <span class="input-group-text">🌌</span>
             <input
                 type="text"
                 class="form-control"
                 v-model="busqueda"
-                placeholder="Buscar planeta..."
+                placeholder="Tu planeta favorito..."
             >
 
         </form>
@@ -119,7 +126,7 @@ const planetasFiltrados = computed(() => {
         <div
             v-else
             id="contenedor_planetas"
-            class="row row-cols-1 row-cols-md-3 g-4"
+            class="weather-content__grid row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mt-3"
         >
 
             <div
@@ -177,6 +184,71 @@ const planetasFiltrados = computed(() => {
 
         </div>
 
+        <aside class="p-4 rounded shadow-sm mt-5 aside">
+
+                <h5 class="text-center aside__texto">
+                    *Planetas enanos
+                </h5>
+
+                <h3 class="text-danger mt-3 aside__titulo">
+                    Más información:
+                </h3>
+
+                <p class="aside__texto">
+                    Conoce más sobre tus planetas favoritos en
+                    <a
+                        href="https://science.nasa.gov/solar-system/planets/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        este enlace
+                    </a>
+                    o haciendo click en el siguiente logo
+                </p>
+
+                <a
+                    href="https://science.nasa.gov/solar-system/planets/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="d-block text-center">
+                    <img
+                        class="img-fluid aside__img"
+                        width="100"
+                        alt="NASA Logo"
+                        src="https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo.svg">
+                </a>
+            </aside>
+
     </main>
 
+    <footer class="text-center p-3 mt-5 rounded footer">
+
+            <div class="row">
+
+                <div class="col-sm-12 mb-3">
+
+                    <button
+                        class="btn btn--footer"
+                        onclick="window.scrollTo({
+                            top:0,
+                            behavior:'smooth'
+                        })">
+                        Volver arriba
+                    </button>
+
+                </div>
+
+            </div>
+
+            <p class="mb-0 footer__texto">
+                DERECHOS RESERVADOS 2026
+                <br>
+                CREADO POR BERNOULLI314
+            </p>
+
+    </footer>
+
 </template>
+
+<style lang="scss" scoped>
+
+</style>
