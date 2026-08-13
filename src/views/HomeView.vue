@@ -9,6 +9,7 @@ export default {
         return {
             categoria: 'sistemaSolar',
             busqueda: '',
+            unidad: 'C',
             planetas_ss,
             exoplanetas
         }
@@ -35,6 +36,18 @@ export default {
         }
     },
     methods: {
+        convertirTemperatura(temp) {
+            if (this.unidad === 'C') {
+                return temp
+            }
+
+            return (temp * 9 / 5) + 32
+        },
+
+        cambiarUnidad() {
+            this.unidad = this.unidad === 'C' ? 'F' : 'C'
+        },
+
         volverArriba() {
             window.scrollTo({
                 top: 0,
@@ -64,6 +77,13 @@ export default {
                 @click="categoria = 'exoplanetas'"
             >
                 Exoplanetas
+            </button>
+
+            <button
+                class="mb-2 btn btn--footer"
+                @click="cambiarUnidad"
+            >
+                Cambiar a °{{ unidad === 'C' ? 'F' : 'C' }}
             </button>
 
             <a class="nav-link btn"
@@ -140,7 +160,7 @@ export default {
 
                         <div class="temperatura place-card__temp">
 
-                            {{ planeta.temp }}
+                            {{ convertirTemperatura(planeta.temp) }}°{{ unidad }}
 
                         </div>
 

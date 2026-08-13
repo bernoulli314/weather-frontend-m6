@@ -3,7 +3,7 @@ export const planetas_ss = [
     {
         id:"mercurio",
         nombre:"Mercurio",
-        temp:"430°C",
+        temp:430,
         estado:"Calor extremo",
         icono:"🔥",
         imagen_url:"https://science.nasa.gov/wp-content/uploads/2023/05/mercury-from-messenger-pia15160-1920x640-1.jpg",
@@ -30,7 +30,7 @@ export const planetas_ss = [
     {
         id:"venus",
         nombre:"Venus",
-        temp:"465°C",
+        temp:465,
         estado:"Tormenta ácida",
         icono:"☁️",
         imagen_url:"https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2024/03/venus-mariner-10-pia23791-fig2.jpg",
@@ -57,7 +57,7 @@ export const planetas_ss = [
     {
         id:"tierra",
         nombre:"La Tierra",
-        temp:"15°C",
+        temp:15,
         estado:"Despejado",
         icono:"☀️",
         imagen_url:"https://science.nasa.gov/wp-content/uploads/2023/05/earth-1-jpg.webp",
@@ -84,7 +84,7 @@ export const planetas_ss = [
     {
         id:"marte",
         nombre:"Marte",
-        temp:"-63°C",
+        temp:-63,
         estado:"Tormenta de polvo",
         icono:"🌪️",
         imagen_url:"https://science.nasa.gov/wp-content/uploads/2024/03/mars-full-globe-16x9-1.jpg",
@@ -111,7 +111,7 @@ export const planetas_ss = [
     {
         id:"jupiter",
         nombre:"Júpiter",
-        temp:"-145°C",
+        temp:-145,
         estado:"Tormenta gigante",
         icono:"⛈️",
         imagen_url:"https://science.nasa.gov/wp-content/uploads/2024/03/jupiter-marble-pia22946-16x9-1.jpg",
@@ -138,7 +138,7 @@ export const planetas_ss = [
     {
         id:"saturno",
         nombre:"Saturno",
-        temp:"-178°C",
+        temp:-178,
         estado:"Vientos intensos",
         icono:"💨",
         imagen_url:"https://science.nasa.gov/wp-content/uploads/2023/05/saturn-farewell-pia21345-sse-banner-1920x640-1.jpg",
@@ -165,7 +165,7 @@ export const planetas_ss = [
     {
         id:"urano",
         nombre:"Urano",
-        temp:"-224°C",
+        temp:-224,
         estado:"Frío extremo",
         icono:"❄️",
         imagen_url:"https://science.nasa.gov/wp-content/uploads/2024/03/uranus-pia18182-16x9-1.jpg",
@@ -192,7 +192,7 @@ export const planetas_ss = [
     {
         id:"neptuno",
         nombre:"Neptuno",
-        temp:"-214°C",
+        temp:-214,
         estado:"Vientos supersónicos",
         icono:"🌬️",
         imagen_url:"https://science.nasa.gov/wp-content/uploads/2024/03/pia01492-neptune-full-disk-16x9-1.jpg",
@@ -219,7 +219,7 @@ export const planetas_ss = [
     {
         id:"pluton",
         nombre:"Plutón*",
-        temp:"-229°C",
+        temp:-229,
         estado:"Nieve de nitrógeno",
         icono:"❄️",
         imagen_url:"https://science.nasa.gov/wp-content/uploads/2024/03/pluto-new-horizons-pia20291-16x9-1.jpg",
@@ -246,7 +246,7 @@ export const planetas_ss = [
     {
         id:"ceres",
         nombre:"Ceres*",
-        temp:"-105°C",
+        temp:-105,
         estado:"Superficie helada",
         icono:"🧊",
         imagen_url:"https://science.nasa.gov/wp-content/uploads/2024/03/ceres-dawn-pia19562-16x9-1.jpg",
@@ -273,7 +273,7 @@ export const planetas_ss = [
     {
         id:"haumea",
         nombre:"Haumea*",
-        temp:"-241°C",
+        temp:-241,
         estado:"Hielo cristalino",
         icono:"🧊",
         imagen_url:"https://science.nasa.gov/wp-content/uploads/2024/03/haumea-30jun2015-22-28ok2-final-16x9-1.jpg",
@@ -300,7 +300,7 @@ export const planetas_ss = [
     {
         id:"makemake",
         nombre:"Makemake*",
-        temp:"-239°C",
+        temp:-239,
         estado:"Escarcha espacial",
         icono:"❄️",
         imagen_url:"https://science.nasa.gov/wp-content/uploads/2024/03/dwarf-planet-makemake-16x9-1.jpg",
@@ -327,7 +327,7 @@ export const planetas_ss = [
     {
         id:"eris",
         nombre:"Eris*",
-        temp:"-243°C",
+        temp:-243,
         estado:"Invierno eterno",
         icono:"🌌",
         imagen_url:"https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/e/ErisArtistConcept1200w.jpg",
@@ -358,7 +358,7 @@ export const exoplanetas = [
     {
         id:"proxima-centauri-b",
         nombre:"Proxima Centauri b",
-        temp:"-39°C",
+        temp:-39,
         estado:"Frío rocoso",
         icono:"❄️",
         imagen_url:"https://assets.science.nasa.gov/dynamicimage/assets/science/astro/exo-explore/assets/content/planets/superearth-7.jpg",
@@ -385,7 +385,7 @@ export const exoplanetas = [
     {
         id:"kepler-22b",
         nombre:"Kepler-22b",
-        temp:"22°C",
+        temp:22,
         estado:"Posible zona habitable",
         icono:"🌎",
         imagen_url:"https://assets.science.nasa.gov/dynamicimage/assets/science/astro/exo-explore/2024/03/Kepler22b.jpg",
@@ -412,7 +412,7 @@ export const exoplanetas = [
     {
         id:"trappist-1e",
         nombre:"TRAPPIST-1e",
-        temp:"-22°C",
+        temp:-22,
         estado:"Posible océano helado",
         icono:"🧊",
         imagen_url:"https://assets.science.nasa.gov/dynamicimage/assets/science/astro/exo-explore/2024/03/TRAPPIST-1e.png",
@@ -439,7 +439,7 @@ export const exoplanetas = [
     {
         id:"51-pegasi-b",
         nombre:"51 Pegasi b",
-        temp:"1200°C",
+        temp:1200,
         estado:"Gigante gaseoso ardiente",
         icono:"🔥",
         imagen_url:"https://assets.science.nasa.gov/dynamicimage/assets/science/astro/exo-explore/assets/content/planets/gasgiant-7.jpg",
@@ -466,7 +466,7 @@ export const exoplanetas = [
     {
         id:"hd209458b",
         nombre:"HD 209458 b (Osiris)",
-        temp:"1000°C",
+        temp:1000,
         estado:"Atmósfera evaporándose",
         icono:"☄️",
         imagen_url:"https://assets.science.nasa.gov/dynamicimage/assets/science/astro/exo-explore/assets/content/planets/gasgiant-7.jpg",
