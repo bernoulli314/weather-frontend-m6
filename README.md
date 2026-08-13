@@ -1,4 +1,4 @@
-# 🪐 El Tiempo en tu Planeta v4
+# 🪐 El Tiempo en tu Planeta v5
 
 **El Tiempo en tu Planeta** es una página web interactiva que muestra el clima de diferentes planetas del sistema solar y algunos exoplanetas populares.  
 Al seleccionar un planeta y hacer clic en **“Ver detalle”**, se puede acceder a información ampliada y al pronóstico del clima para los próximos 7 días.
@@ -10,14 +10,18 @@ Si se selecciona el planeta Tierra, puede ver el tiempo de una ciudad a elecció
 
 *En la versión anterior se añadieron funciones que calculan información estadística sobre el clima de los planetas*
 
-*En esta version se añaden caracteristicas de una api de clima*
+*En la version anterior se añadieron caracteristicas de una api de clima*
+
+*En esta versión se migra al formato Vue, enfocandose en mantener las funcionalidades y estilos de la app anterior. Las vistas principales son HomeView.vue y DetalleLugarView.vue, App.vue se comunica con las vistas a través de LayoutComponent.vue*
+
+**
 
 ---
 
 ## 🚀 Demo
 
-🔗 Repositorio: https://github.com/bernoulli314/weather-frontend-m5
-🌐 Página web: https://bernoulli314.github.io/weather-frontend-m5/
+🔗 Repositorio: https://github.com/bernoulli314/weather-frontend-m6
+🌐 Página web: https://bernoulli314.github.io/weather-frontend-m6/
 
 ---
 
@@ -29,6 +33,7 @@ Si se selecciona el planeta Tierra, puede ver el tiempo de una ciudad a elecció
 - 🪐 Vista de detalle por planeta
 - 📅 Pronóstico de clima de 7 días
 - 🎨 Interfaz dinámica y responsive
+- 🌞 Pronóstico de 7 días de tu ciudad de preferencia en la Tierra
 
 ---
 
@@ -39,3 +44,4 @@ Si se selecciona el planeta Tierra, puede ver el tiempo de una ciudad a elecció
 - Bootstrap 5
 - JavaScript
 - SCSS
+- Vue
