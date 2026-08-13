@@ -1,61 +1,55 @@
-<script setup>
-
-import { ref, computed } from 'vue'
-
+<script>
 import {
     planetas_ss,
     exoplanetas
 } from '../data/datos.js'
 
+export default {
+    data() {
+        return {
+            categoria: 'sistemaSolar',
+            busqueda: '',
+            planetas_ss,
+            exoplanetas
+        }
+    },
 
-// Categoría actualmente seleccionada
+    computed: {
+        planetasFiltrados() {
 
-const categoria = ref('sistemaSolar')
+            let lista
 
+            if (this.categoria === 'sistemaSolar') {
+                lista = this.planetas_ss
+            } else {
+                lista = this.exoplanetas
+            }
 
-// Texto ingresado en el buscador
-
-const busqueda = ref('')
-
-
-// Lista de planetas que se muestra en pantalla
-
-const planetasFiltrados = computed(() => {
-
-    let lista
-
-    if (categoria.value === 'sistemaSolar') {
-
-        lista = planetas_ss
-
-    } else {
-
-        lista = exoplanetas
-
-    }
-
-
-    return lista.filter(planeta =>
-
-        planeta.nombre
-            .toLowerCase()
-            .includes(
-                busqueda.value.toLowerCase()
+            return lista.filter(planeta =>
+                planeta.nombre
+                    .toLowerCase()
+                    .includes(
+                        this.busqueda.toLowerCase()
+                    )
             )
-
-    )
-
-})
-
+        }
+    },
+    methods: {
+        volverArriba() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    }
+}
 </script>
-
 
 <template>
 
     <main class="weather-content">
 
         <!-- Botones para cambiar de categoría -->
-
         <div class="navbar-nav d-flex flex-row flex-wrap">
 
             <button
@@ -64,7 +58,6 @@ const planetasFiltrados = computed(() => {
             >
                 Sistema Solar
             </button>
-
 
             <button
                 class="mb-2 btn btn--exo"
@@ -108,21 +101,15 @@ const planetasFiltrados = computed(() => {
 
         </form>
 
-
         <!-- Mensaje cuando no hay resultados -->
-
         <p
             v-if="planetasFiltrados.length === 0"
             class="weather-content__texto"
         >
-
             🔭 No se encontró ningún planeta.
-
         </p>
 
-
         <!-- Tarjetas -->
-
         <div
             v-else
             id="contenedor_planetas"
@@ -145,13 +132,11 @@ const planetasFiltrados = computed(() => {
 
                         </h5>
 
-
                         <div class="icono-planeta place-card__icon">
 
                             {{ planeta.icono }}
 
                         </div>
-
 
                         <div class="temperatura place-card__temp">
 
@@ -159,21 +144,17 @@ const planetasFiltrados = computed(() => {
 
                         </div>
 
-
                         <p class="estado place-card__status">
 
                             {{ planeta.estado }}
 
                         </p>
 
-
                         <RouterLink
                             :to="`/lugar/${planeta.id}`"
                             class="btn btn-outline-info place-card__link"
                         >
-
                             Ver detalle
-
                         </RouterLink>
 
                     </div>
@@ -228,10 +209,7 @@ const planetasFiltrados = computed(() => {
 
                     <button
                         class="btn btn--footer"
-                        onclick="window.scrollTo({
-                            top:0,
-                            behavior:'smooth'
-                        })">
+                        @click="volverArriba">
                         Volver arriba
                     </button>
 
@@ -249,6 +227,4 @@ const planetasFiltrados = computed(() => {
 
 </template>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
