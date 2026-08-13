@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DetalleLugarView from '../views/DetalleLugarView.vue'
-
+http://localhost:5173/weather-frontend-m6/
 const routes = [
   {
     path: '/',
@@ -21,7 +21,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('#'),
   routes,
 
   scrollBehavior() {
